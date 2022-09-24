@@ -1,3 +1,2 @@
-# aplitok
-
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/11ty-pxv6kh)
+Develope by
+[https://www.fiverr.com/creativitas](https://www.fiverr.com/creativitas)

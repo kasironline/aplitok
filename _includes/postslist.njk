@@ -5,18 +5,18 @@
   <div class="flip-card-inner">
     <div class="flip-card-front">
   <a href="{{ post.url | url }}">
-  <img src="{{ post.data.image }}" class="cover"/>
+  <img src="{{ post.data.image }}" width="100%" height="100%" loading="lazy" class="cover"/>
    </div>
     <div class="flip-card-back">
   <h3>{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a></h3>
-    <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+  <p>{{post.data.description}}</p>
     {% for tag in post.data.tags | filterTagList %}
       {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
-      <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a><br/>
+     <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
+    {% endfor %} 
       <p class="info">
       <a href="{{ post.url | url }}" class="link">{{post.data.title}} info</a>
       </p>
-    {% endfor %} 
     </div>
   </div>
 </div> 

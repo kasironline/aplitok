@@ -1,11 +1,14 @@
 ---
 layout: layouts/home.njk
+title: Fitur Aplikasi Toko
+description: Pelajari mudah nya penggunaan aplikasi toko grosir dan eceran plus webite CMS ini untuk digunakan.
 permalink: /posapp/
 eleventyNavigation:
   key: Applikasi
   order: 2
 ---
 
-<h1><a href="/">Fitur Aplikasi Toko</a></h1>
+<h1><a href="{{page.url}}">{{title}}</a></h1>
+<h2>{{description}}</h2>
 {% set postslist = collections.posts %}
 {% include "postslist.njk" %}

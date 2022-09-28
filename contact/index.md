@@ -1,9 +1,9 @@
 ---
 layout: layouts/post.njk
-title: About Me
+title: Contact Us
 templateClass: tmpl-post
 eleventyNavigation:
-  key: About Me
+  key: Contact
   order: 3
 ---
 

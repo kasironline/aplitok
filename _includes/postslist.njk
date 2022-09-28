@@ -5,7 +5,7 @@
   <div class="flip-card-inner">
     <div class="flip-card-front">
   <a href="{{ post.url | url }}">
-  <img src="{{ post.image }}"/>
+  <img src="{{ post.data.image }}" class="cover"/>
    </div>
     <div class="flip-card-back">
   <h3>{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a></h3>

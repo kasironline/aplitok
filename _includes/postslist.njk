@@ -1,12 +1,25 @@
-<ol reversed class="postlist" style="counter-reset: start-from {{ (postslistCounter or postslist.length) + 1 }}">
 {% for post in postslist | reverse %}
-  <li class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
-    <a href="{{ post.url | url }}" class="postlist-link">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
+<div class="row">
+  <div class="column"> 
+  <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+  <a href="{{ post.url | url }}">
+  <img src="{{ post.image }}"/>
+   </div>
+    <div class="flip-card-back">
+  <h3>{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a></h3>
     <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
     {% for tag in post.data.tags | filterTagList %}
       {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
-      <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
-    {% endfor %}
-  </li>
+      <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a><br/>
+      <p class="info">
+      <a href="{{ post.url | url }}" class="link">{{post.data.title}} info</a>
+      </p>
+    {% endfor %} 
+    </div>
+  </div>
+</div> 
+  </div>
+</div>
 {% endfor %}
-</ol>
